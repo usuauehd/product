@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>product managements system</title>
+  </head>
+  <body>
+    <div class="rotete-screen">
+      <h2>Please flip your screen</h2>
+    </div>
+    <header>
+      <div class="head">
+        <h1>product <span>managements</span> system</h1>
+      </div>
+      <button class="toggle-btn" id="change-btn">
+        <div class="sun-rays"></div>
+        <div class="main-circle"></div>
+      </button>
+    </header>
+    <section class="crud">
+      <div class="inputs">
+        <input type="text" id="title" placeholder="title" />
+        <div class="price">
+          <input
+            onkeyup="calculateTotal()"
+            type="number"
+            id="price"
+            placeholder="price"
+          />
+          <input
+            onkeyup="calculateTotal()"
+            type="number"
+            id="taxes"
+            placeholder="taxes"
+          />
+          <input
+            onkeyup="calculateTotal()"
+            type="number"
+            id="ads"
+            placeholder="ads"
+          />
+          <input
+            onkeyup="calculateTotal()"
+            type="number"
+            id="discount"
+            placeholder="discount"
+          />
+          <small id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="count" />
+        <input type="text" id="category" placeholder="category" />
+        <button id="submit">Create</button>
+      </div>
+      <div class="outputs">
+        <div class="search-block">
+          <input
+            onkeyup="searchProduct(this.value)"
+            type="text"
+            id="search"
+            placeholder="Search"
+          />
+          <div class="btn-search">
+            <button onclick="getSearchMod(this.id)" id="search-title">
+              Search By Title
+            </button>
+            <button onclick="getSearchMod(this.id)" id="search-category">
+              Search By Category
+            </button>
+          </div>
+        </div>
+        <div id="delete-all-btn"></div>
+        <table>
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+    <footer>
+      <div class="creators">
+        <h2>Creators :</h2>
+        <a href="https://usuauehd.github.io/mo/" target="_blank"
+          >Mohammed <span>Al-Hady</span></a
+        >
+        <a href="https://usuauehd.github.io/mohammed/" target="_blank"
+          >Mohammed <span>Sadik</span></a
+        >
+        <a href="#">Karar <span>tawfik</span></a>
+      </div>
+      <a href="http://127.0.0.1:5500/index.html" class="login-btn">Log Out</a>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
